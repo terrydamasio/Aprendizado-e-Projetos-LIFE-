@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+    <script>
+        //BOM (Browser Object Model) é uma API que permite o acesso a recursos do browser através do JavaScript. Ex: recuperar e salvar cookies. 
+
+        //BOM > window.document: É a janela do browser onde todo o conteúdo é renderizado. Dentro do window temos o objeto document que fornece acesso aos elementos html da página.
+
+        var janela 
+        function abrirPopup() {
+            janela = window.open('', 'nova_janela', 'width=200', 'height=100')
+        }
+
+        function fecharPopup() {
+            janela.close()
+        }
+    </script>
+</head>
+<body>
+    <button onclick="abrirPopup()">Abrir Janela</button>
+    <button onclick="fecharPopup()">Fechar Janela</button>
+    <button onclick="window.print()">Imprimir página</button>
+</body>
+</html>

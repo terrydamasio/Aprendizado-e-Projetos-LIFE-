@@ -48,7 +48,16 @@ var cronometro = setInterval(function () {
 function posicaoRandomica() {
 
     //removendo a mosca anterior (caso exista)
+    if (document.getElementById('mosca')) {
+        document.getElementById('mosca').remove()
     
+        if (vidas > 3) {
+            window.location.href = 'game_over.html'
+        } else {
+            document.getElementById('v' + vidas).src = "img/coracao_vazio.png"
+            vidas++
+        } 
+    }
 
     //Usando Math.floor para tirar as casas decimais 
     var posicaoX = Math.floor(Math.random() * largura) - 90
@@ -99,17 +108,4 @@ function ladoAleatorio() {
             return 'ladoB'
     }  
 
-}
-
-
-
-if (document.getElementById('mosca')) {
-    document.getElementById('mosca').remove()
-
-    if (vidas > 3) {
-        window.location.href = 'game_over.html'
-    } else {
-        document.getElementById('v' + vidas).src = "img/coracao_vazio.png"
-        vidas++
-    } 
 }

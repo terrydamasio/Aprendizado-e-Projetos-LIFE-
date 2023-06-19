@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <script>
+
+    var cont = 0;
+    
+    function contarVogais(){ 
+        var texto = document.getElementById("idString").value;
+            var texto = texto.toLowerCase();
+
+        for (var i = 0; i < texto.length; i++) {
+            if (texto.charAt(i) == "a" || texto.charAt(i) == "e" || texto.charAt(i) == "i" || texto.charAt(i) == "o" || texto.charAt(i) == "u") {
+                cont++; 
+            }
+        }
+
+        document.getElementById("idTexto").innerHTML = "Número de vogais: " + cont;
+    }
+        
+    </script>
+</head>
+<body>
+    <form name="vogais">
+        <input type="text" id="idString" placeholder="Digite aqui">
+        <br><button type="button" name="btn" id="botao" onclick="contarVogais()";>Clique Aqui</button>
+        <br><span id="idTexto"></span>
+    </form>
+</body>
+</html>

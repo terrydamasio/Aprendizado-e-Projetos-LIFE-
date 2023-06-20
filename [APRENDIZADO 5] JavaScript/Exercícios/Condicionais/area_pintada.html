@@ -10,16 +10,16 @@
         var altura = Number.parseFloat(prompt('Digite a altura da parede: '));
 
         var area = largura * altura;
-
         var quantidadeTinta = area / 2;
-
         var custo = (quantidadeTinta * 13).toFixed(2);
 
-        document.write('A área total a ser pintada será: ' + area + ' m².<br />');
-        document.write('A quantidade de tinta necessária para pintar a área será de: ' + quantidadeTinta + ' litros.<br />');
-        document.write('O valor para quantidade de tinta: R$ ' + custo + ' reais.');
+        function calcularArea () {
+            document.write('A área total a ser pintada será: ' + area + ' m².<br />');
+            document.write('A quantidade de tinta necessária para pintar a área será de: ' + quantidadeTinta + ' litros.<br />');
+            document.write('O valor para quantidade de tinta: R$ ' + custo + ' reais.');
+        }
 
-
+        calcularArea()
     </script>
 </head>
 <body>

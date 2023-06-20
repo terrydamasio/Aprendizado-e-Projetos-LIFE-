@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+    <script>
+        var valorHora = Number.parseFloat(prompt('Digite o valor da sua hora: '));
+        var horasTrabalhadas = Number.parseFloat(prompt('Digite a quantidade de horas trabalhadas por mês: '));
+        
+        var salarioBruto = Number.parseFloat(valorHora * horasTrabalhadas);
+        var inss = Number.parseFloat(salarioBruto * 10/100);
+        var fgts = Number.parseFloat(salarioBruto * 11/100);
+        
+        document.write('Folha de pagamento: <br /> --------------------------- <br />')
+        
+        document.write('Salario Bruto (' + valorHora + '*' + horasTrabalhadas + '): R$ ' + (salarioBruto).toFixed(2) + '<br />');
+        
+        function calcularFolha (){
+            if (salarioBruto <= 900) {
+                document.write('(-)IR (Isento): R$ ' + (ir = Number.parseFloat((0).toFixed(2))));
+            } else if (salarioBruto > 900 && salarioBruto <= 1500) {
+                document.write('(-)IR (Desconto de 5%): R$ ' + (ir = Number.parseFloat((salarioBruto * 5/100).toFixed(2))));
+            } else if (salarioBruto > 1500 && salarioBruto <= 2500) {
+                document.write('(-)IR (Desconto de 10%): R$ ' + (ir = Number.parseFloat((salarioBruto * 10/100).toFixed(2))));
+            } else {
+                document.write('(-)IR (Desconto de 20%): R$ ' + (ir = Number.parseFloat((salarioBruto * 20/100).toFixed(2))));
+            }
+            
+            document.write('<br />(-)INSS (10%): R$ ' + (inss).toFixed(2))
+            document.write('<br />FGTS(11%): R$ ' + (fgts).toFixed(2))
+            document.write('<br />Total de descontos: R$ ' + ((totalDescontos = ir + inss).toFixed(2)))
+            document.write('<br />Salário Líquido: R$ ' + ((salarioBruto - totalDescontos).toFixed(2)))
+            
+            return;
+        } 
+
+        calcularFolha()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

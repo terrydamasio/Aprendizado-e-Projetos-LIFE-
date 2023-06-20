@@ -8,9 +8,14 @@
 
         var numero = prompt('Digite um número: ');
         
-        document.write('O antecessor de ' + (numero--) + ' é ' + (numero) + '<br />');
-        document.write('O sucessor de ' + (++numero) + ' é ' + (++numero));
+        function calcularAntecessor () {
+            document.write('O antecessor de ' + (numero--) + ' é ' + (numero) + '<br />');
+            document.write('O sucessor de ' + (++numero) + ' é ' + (++numero));
+            
+            return;
+        }
 
+        calcularAntecessor()
     </script>
 </head>
 <body>

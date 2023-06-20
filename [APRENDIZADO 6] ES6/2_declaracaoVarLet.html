@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        //let > a diferença entre let e var é que o let preserva o escopo onde a variável foi criada, fazenndo com que a variavel n sofra hoisting
+ 
+        //3 escopos: global, função e bloco
+        //Variáveis declaradas no escopo global podem ser acessadas em qualquer escopo
+        //Variáveis declaradas no escopo de bloco sofrem hoisting para o escopo global, por isso podem ser acessadas tanto pelo escopo global quanto pelo escopo da função.
+        //Variáveis declaradas no escopo da função só podem ser acessados dentro do próprio escopo
+
+        function x() {
+            //variável q sofreu hoisting p escopo globalpode ser acessada
+            console.log('dentro da função: ' + serie) 
+
+            if(true){
+    
+            }
+        }
+
+        if(true) {
+            var serie = 'Flash' //variável declarada dentro do escopo de bloco sofre hoisting pro escopo global
+            let serie1 = 'The Walking Dead'
+
+            x()
+            console.log(serie)
+            console.log(serie1) //consigo acessar variável let dentro do escopo em q foi criada 
+        }
+
+        console.log(serie)
+        console.log(serie1) //Não consigo acessar variável let criada no escopo de bloco
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

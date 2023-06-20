@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMAScript</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        //forma simplificada de escrever funções anonimas 
+        /* 
+        let quadrado = function(x) {
+            return x * x;
+        }
+        */
+
+        let quadrado = (x) => {
+            return x * x 
+        }
+
+        //podemos omitir a informação de "()" quando recebemos apenas um parâmetro. Além disso também podemos omitir a instrução de "{}" indicando oq vamos fazer na nossa função
+        let soma = y => y + y
+
+
+        //Como eu chamo uma função contida dentro de uma variável? Basta recuperar a variável usando "()" definindo um parâmetro. 
+        document.write('A multiplicação de x * x é ' + quadrado(3)) 
+
+        document.write('<br />A soma de y + y é ' + soma(2))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

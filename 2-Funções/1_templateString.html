@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMAScript</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        //A template strings é semelhante a um processo de concatenação, a diferença é que dentro de uma string ele abre pequenas janelas que serão processadas pelo intepredator do js e o resultado dessa interpretação é concatenada a string em questão. Esse processo é chamado de interpolação.
+
+        let nome = 'Jorge'
+
+        console.log(`Oi ${nome}, tudo bem?`)
+
+        console.log(`7 + 7 = ${7+7}.`)
+
+        function calcular(x, y) {
+
+            return x * y;
+        }
+
+        console.log(`A multiplicação de 8 x 9 = ${calcular(8, 9)}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

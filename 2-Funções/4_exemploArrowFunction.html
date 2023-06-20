@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMAScript</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+        let parOuImpar = numero => numero % 2 === 0 ? 'par' : 'ímpar' //return implícito
+
+        document.write(parOuImpar(1000))
+
+        /* 
+        let parOuImpar = numero => {
+            if (numero % 2 === 0) {
+                return 'par'
+            } else {
+                return 'ímpar'
+            }
+        }
+
+        document.write(parOuImpar(6))
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

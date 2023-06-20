@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        //const > usado para criar constantes, ou seja, variáveis que não sofrem alterações ao longo do script
+        //OBS: A variável precisa ser declarada com uma valor de forma imediata. Uma boa prática é declarar constantes com letras maiúsculas
+
+        const SERIE = 'Friends'
+
+        function x() {
+            const SERIE = 'Flash'
+            console.log('Dentro da função ' + SERIE)
+        }
+
+        x()
+
+        console.log('Escopo global ' + SERIE)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

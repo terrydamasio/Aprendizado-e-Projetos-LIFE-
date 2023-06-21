@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        //paradigma de orientação a objetos
+        class Sofa {
+            constructor(qntdLugares, enclinavel, cor) {
+                this.qntdLugares = qntdLugares
+                this.enclinavel = enclinavel
+                this.cor = cor
+            }
+
+            enclinarSofa() {
+                if(this.enclinavel === 'true') {
+                    console.log('Sofá enclinável.')
+                } else { 
+                    console.log('O sofá não é enclinável')
+                }
+            }
+
+            lugaresSofa() {
+                if(this.qntdLugares === '1') {
+                    console.log('É uma poltrona')
+                } else {
+                    console.log('É um sofá.')
+                }
+            }
+        }
+
+        let sofa = new Sofa(prompt('Digite a quantidade de lugares'), prompt('Digite false or true: '), prompt('Digite uma cor: '))
+        let sofa2 = new Sofa('1', 'true', 'amarelo')
+        
+        console.log(sofa)
+        sofa.enclinarSofa()
+        sofa.lugaresSofa()
+
+        console.log(sofa2)
+        sofa2.enclinarSofa()
+        sofa2.lugaresSofa()
+
+    </script>   
+</head>
+<body>
+
+</body>
+</html>

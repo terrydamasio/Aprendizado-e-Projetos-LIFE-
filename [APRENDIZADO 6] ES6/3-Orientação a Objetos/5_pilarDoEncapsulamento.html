@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        /*  Pilar do encapsulamento: consiste em encapsular um objeto para torna-lo seguro, ou seja, 
+            vai permiti-lo dizer o que dentro dele vai estar disponível ao sistema.  
+            - Seguro 
+            - Reutilizável
+        */
+
+        class Tv {
+            constructor() {
+                this._relacaoCanais = Array(2, 4, 7, 9, 13)
+                this._canalAtivo = 5
+                this._volume = 5
+            }
+
+            //métodos getters & setters (muito ultilizados dentro de classes para dar a possibilidade de recuperar e setar atributos privados. Através de um get indicamos o atributo que quer recuperar, funcionando como uma função, ou seja, através de acessar o atributo diretamente, acessamos o método)
+            get canalAtivo() {
+                return this._canalAtivo
+            }
+
+            set canalAtivo(canal) {
+                //vai procurar o canal ativo e dar a posição dele no array, e caso não exista da -1 como valor no console.log
+                if (this._relacaoCanais.indexOf(canal) !== -1){
+                    this._canalAtivo = canal
+                }
+            }
+        }
+
+        let tv = new Tv()
+
+        tv.canalAtivo = 7
+        console.log(tv.canalAtivo)
+
+
+    </script>   
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        /*  Pilar da Abstração: compreender as coisas do mundo real e traze-las para dentro dos sistemas 
+            - Entidade: um objeto do mundo real deve passar por dentro de nossa aplicação
+            - Identidade: identidade da nossa entidade, dando a linguagem a capacidade de identificar os objetos de forma única independente
+            - Características ou Atributos: vamos abstrair as características que fazem parte da regra do negócio, podendo ser mais ou menos detalhadas. 
+            - Ações ou Métodos: são os comportamentos do objeto no mundo real, que fazem sentido no contexto da regra do negócio.
+        */
+        
+        //Modelo do Objeto: quando estamos definindo classes é interessante usar letras maiúsculas no início
+        class ContaBancaria {
+            //agencia 
+            //numeroConta
+            //saldo
+            //limite
+
+            //definir as características ou atributos dentro do constructor usando o operador 'this'
+            // o this vai fazer com q a agencia seja conectada ao contexto do objeto
+            constructor() { 
+                this.agencia = 1075 
+                this.numeroConta = 8351125
+                this.saldo = 50
+                this.limite = 450
+            }
+            
+            //definir ações ou métodos
+            depositar(valorDeposito) {
+                this.saldo += valorDeposito //pegar o valor atual do saldo e somar com o valorDeposito
+            }
+
+            sacar(valorSaque) {
+                this.saldo -= valorSaque 
+            }
+            
+            consultarSaldo() {
+                return this.saldo
+            }
+        } 
+
+        //o new é um operador que indica ao interpretador do javascript que eu quero transformar o modelo em um objeto. Ou seja, podemos recuperar os atributos e métodos desse objeto a partir dessa instância
+        let x = new ContaBancaria()
+        let y = new ContaBancaria()
+
+        // o ponto nos permite acessar atributos e métodos dos objetos. Basta colocar o ponto e digitar os atributos ou métodos
+        console.log(x.consultarSaldo())
+
+        x.depositar(900)  
+
+        console.log(x.consultarSaldo())
+
+        x.sacar(500)
+
+        console.log(x.consultarSaldo())
+
+        console.log(y.consultarSaldo())
+
+    </script>   
+</head>
+<body>
+
+</body>
+</html>

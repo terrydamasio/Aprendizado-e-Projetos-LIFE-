@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        /* Orientação a objetos 
+        Paradigmas de programação: são padrões e condutas de escrita de código
+        
+        Procedural/ Estruturado/ Imperativo (Chamada de procedimentos (procedures) para manipulação de dados)
+            Funcional
+            Lógico
+        
+        Paradigma de Orientação a Objetos (Estruturas de dados com comportamentos. Criamos um objeto com base em uma classe) 
+            Concorrente
+            Reativo
+        */
+
+        let a = 10
+        let b = 20
+        let operador = prompt('Digite a operação: ')
+
+        function calcularOperacao (a, b, operador) {
+            if (operador === 'mult') {
+                console.log(a * b)
+            } else if (operador === 'div') {
+                console.log(a / b)
+            }
+            
+            return
+        }
+
+        calcularOperacao(a, b, operador)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        /*  Pilar da Herança: 
+            - Código reutilizável e menos redundante
+            - Manutenção do código
+        */
+        class Animal {
+            constructor() {
+                this.cor = ''
+                this.tamanho = null
+            }
+
+            dormir() {
+                console.log('Dormir')
+            }
+        }
+        //Indicar de forma implícita que a class cachorro e passaro herdam os atributos da class animal 
+        class Cachorro extends Animal{
+            constructor() {
+                super()
+                this.orelhas = 'Grandes e caídas'
+            }
+
+            correr() {
+                console.log('Correr')
+            }
+
+            rosnar() {
+                console.log('Rosnar')
+            }
+        }
+
+        class Passaro extends Animal {
+            constructor() {
+                super()
+                this.bico = 'Bico curto'
+            }
+
+            voar() {
+                console.log('Voar')
+            }
+        } 
+
+        let cachorro = new Cachorro()
+        let passaro = new Passaro()
+
+        console.log(cachorro)
+        console.log(passaro)
+
+
+    </script>   
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
     <script type="text/babel">
-        /*  Pilar da Herança: 
+        /*  Pilar da Herança: Unir as atributos e métodos comuns entre as classes
             - Código reutilizável e menos redundante
             - Manutenção do código
         */
@@ -23,7 +23,9 @@
                 console.log('Dormir')
             }
         }
+        
         //Indicar de forma implícita que a class cachorro e passaro herdam os atributos da class animal 
+        //class cachorro
         class Cachorro extends Animal{
             constructor() {
                 super()
@@ -38,7 +40,8 @@
                 console.log('Rosnar')
             }
         }
-
+        
+        //class Passaro
         class Passaro extends Animal {
             constructor() {
                 super()
@@ -50,13 +53,28 @@
             }
         } 
 
+        class Papagaio extends Passaro {
+            constructor() {
+                super()
+                this.sabeFalar = 'sim'
+            }
+
+            falar() {
+                console.log('Falar')
+            }
+        }
+
         let cachorro = new Cachorro()
         let passaro = new Passaro()
+        let papagaio = new Papagaio()
 
-        console.log(cachorro)
-        console.log(passaro)
-
-
+        cachorro.dormir()
+        passaro.dormir()
+        papagaio.falar()
+        papagaio.dormir()
+        papagaio.voar()
+        
+        
     </script>   
 </head>
 <body>

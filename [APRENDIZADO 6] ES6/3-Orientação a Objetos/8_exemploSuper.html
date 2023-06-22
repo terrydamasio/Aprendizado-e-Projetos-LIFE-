@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        //super() -> fornece acesso para o metodo constructor da classe pai, ou seja, ele sempre é incluido nas classes filhas se elas quiserem se conectar com a classe pai, e com isso podemos ou não passar parametros para outras classes.
+
+        class Animal {
+            constructor(cor, tamanho, peso) { //recebendo parametros da classe filho
+                this.cor = cor
+                this.tamanho = tamanho
+                this.peso = peso
+            }
+
+            dormir() {
+                console.log('Dormir')
+            }
+        }      
+
+        class Passaro extends Animal {
+            constructor(bico, cor, tamanho, peso) {  //recebendo o parametro bico do super('Médio') 
+                super(cor, tamanho, peso) //fornecendo valores para os parametros da classe pai 
+                this.bico = bico
+            }
+
+            voar() {
+                console.log('Voar')
+            }
+        } 
+
+        class Papagaio extends Passaro {
+            //Informar para o constructor se o papagaio sabe ou não falar:  vou passar um parametro no let (se eu passar um parametro no let eu preciso receber esse parametro no constructor e vou atribuir como o valor do atributo sabeFalar na classe)
+            constructor(sabeFalar, cor, tamanho, peso) { 
+                super('Médio', cor, tamanho, peso) //fornece acesso ao constructor da classe pai
+                this.sabeFalar = sabeFalar
+            }
+
+            falar() {
+                console.log('Falar')
+            }
+        }
+        
+        let papagaio = new Papagaio(true, 'verde', 25, 800)
+        console.log(papagaio)
+        
+        let papagaio2 = new Papagaio(false, 'amarelo', 10, 250)
+        console.log(papagaio2)
+
+    </script>   
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

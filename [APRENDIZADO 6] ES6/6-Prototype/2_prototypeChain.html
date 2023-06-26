@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        /* ---------------- 
+           Object Prototype: 
+           ----------------
+           É um modelo ou um padrão onde todos os objetos em JavaScript descendem de Object 
+        */
+        
+        Object.prototype.attr50 = 'Z' //Cuidado! Aqui você está criando um atributo global
+        
+        let animal = {attr1: 'a'}
+        let vertebrado = {__proto__: animal, attr2: 'b'} //Estabelecendo herança
+        let ave = {__proto__: vertebrado, attr3: 'c'} //informando que através de ave eu posso acessar o atributo do objeto vertebrado
+
+        console.log(ave.attr3, ave.attr2, ave.attr1, ave.attr50) //através de ave eu tenho acesso a todos os atributos por herança
+
+
+    </script>   
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

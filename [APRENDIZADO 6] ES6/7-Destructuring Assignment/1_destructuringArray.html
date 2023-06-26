@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        /* ------------------------
+           Destructuring Assignment 
+           ------------------------
+           É um operador de desestruturação, ou seja, tira valores de dentro de uma estrutura (que pode 
+           ser um array ou um objeto) e atribui a uma variável
+        */
+        
+        //Indicamos qual é o operador que iremos utilizar para declarar as variáveis (let ou const), indicamos de qual array queremos extrair as informações e na sequência os valores que queremos desestruturar
+        let frutas = ['Abacaxi', 'Uva', 'Maça', 'Mamão']
+        
+        //let [a, b, , c] = frutas //pular um índice o array
+
+        //atribuindo valores padrões na desestruturação dos arrays
+        let [ a, b, c, d, e = 'Banana'] = frutas
+
+        //console.log(a, b, c, d, e)
+
+        //extraindo valores de arrays multidimensionais
+        let coisas = [['Abacaxi', 'Uva', 'Maça', 'Mamão'], ['José', 'Maria']]
+        let [,[,n1]] = coisas
+        let [[,,n2],] = coisas
+        console.log(n1, n2)
+
+    </script>   
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

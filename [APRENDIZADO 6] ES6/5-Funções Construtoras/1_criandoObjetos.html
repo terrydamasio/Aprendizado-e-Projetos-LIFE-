@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        /* ------------------------------------------------ 
+           Criando objetos a partir de funções construtoras
+           ------------------------------------------------
+        */
+
+        let Carro = function() {
+            this.cor = 'Vermelho'
+            this.modelo = 'Volkswagen'
+            this.veloAtual = 0
+            this.veloMaxima = 250
+
+            this.acelerar = function() {
+                //this.veloAtual += 10
+                let velocidade = this.getVeloAtual() + 10
+                this.setVeloAtual(velocidade)
+            }  
+            this.getVeloAtual = function() {
+                return this.veloAtual
+            }
+            this.setVeloAtual = function(veloAtual) {
+                this.veloAtual = veloAtual
+            }
+        }
+
+        let carro = new Carro()
+
+        carro.acelerar()
+        console.log(`A velocidade atual é de: ${carro.getVeloAtual()}`)
+
+    </script>   
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

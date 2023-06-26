@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        /* ---------------- 
+           Funções Factory: 
+           ----------------
+           Através do padrão de projeto Factory nós podemos implementar uma "fábrica" 
+           para criação dos objetos em tempo de execução.
+        */
+
+        let Bicicleta1 = {
+            cor: 'Branca',
+            marcha: 'Única',
+            aro: 12,
+            pedalar() { console.log('Método pedalar executado') }
+        }
+
+        let Bicicleta2 = {
+            cor: 'Vermelha',
+            marcha: '18',
+            aro: 20,
+            pedalar() { console.log('Método pedalar executado') }
+        }
+
+        console.log(Bicicleta1)
+        console.log(Bicicleta2)
+
+        let BicicletaFactory = function(cor, marcha, aro) { //Passar parametros para que as operações fiquem dinamicas
+            return {
+                cor,
+                marcha, 
+                aro,
+                tipoPedal,
+                pedalar() { console.log('Método pedalar executado') }
+            }
+        }
+
+        //Passar os valores dos parametros da chamada da função que retorna o objeto
+        let Bicicleta3 = BicicletaFactory('Vermelha', 18, 20)
+        console.log(Bicicleta3)
+
+        let Bicicleta4 = BicicletaFactory('Azul', 21, 26)
+        console.log(Bicicleta3)
+
+        //console.log(`Cor: ${Bicicleta3.cor}`)
+        //Bicicleta3.pedalar()
+
+
+
+    </script>   
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

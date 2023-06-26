@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        /* Todo objeto literal é um objeto único, e mesmo quando armazenamos o mesmo objeto em diferentes variáveis, todos as variáveis apontaram para o mesmo objeto */
+
+        let assinatura = {
+            idCliente: 1000,
+            descricao: 'Acesso a internet', 
+            status() {
+                console.log('Ativo')
+            }
+        }
+
+        console.log(assinatura.descricao)
+        
+        let y = assinatura
+        
+        console.log(y.descricao)
+
+        //recuperar e modificar a descrição através do objeto y
+
+        y.descricao = 'Internet + tv + telefone'
+
+        console.log(assinatura.descricao)
+        console.log(y.descricao)
+    </script>   
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

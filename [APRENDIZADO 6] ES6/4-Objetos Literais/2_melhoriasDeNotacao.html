@@ -21,26 +21,30 @@
             sexo: sexo, 
             profissao: profissao,
             exibirResumo: function() {
-                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`)
+                console.log(`Olá, meu nome é ${this.nome}, tenho ${this.idade} anos, sou do sexo ${this.sexo} e trabalho como ${this.profissao}`)
             } 
         }
         
         console.log(objeto)
         objeto.exibirResumo()
 
+        /* -----------------------
+            Melhorias de Notação 
+        --------------------------*/
 
         let objeto2 = {
-            nome, // nome = nome variável / valor = valor variável
+            nomeTeste: nome, // 1° melhoria -> nome = nome variável / valor = valor variável
             idade,
             sexo, 
             profissao,
-            exibirResumo() { //chamamos a função a partir do nome
-                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo}, é ${this.profissao}`)
+            exibirResumo() { // 2° melhoria -> chamamos a função a partir do nome
+                console.log(`Olá, meu nome é ${this.nomeTeste}, tenho ${this.idade} anos, sou do sexo ${this.sexo} e trabalho como ${this.profissao}`)
             } 
         }
 
         console.log(objeto2)
         objeto.exibirResumo()
+    
     </script>   
 </head>
 <body>

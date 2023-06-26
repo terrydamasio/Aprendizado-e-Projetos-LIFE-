@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        /* -------------------------------- 
+           Encapsulando atributos e métodos:
+           --------------------------------
+           Fazer com que atributos e metodos sejam protegidos, públicos ou privados, ou seja, são operadores
+           que buscam atribuir níveis de visibilidade para os atributos e métodos de um objeto.
+        */
+
+        let Carro = function() {
+            this.cor = 'Vermelho'
+            this.modelo = 'Volkswagen'
+            this.veloAtual = 0
+            this.veloMaxima = 250
+
+            this.acelerar = function() {
+                let velocidade = this.getVeloAtual() + 50
+                if (velocidade > this.veloMaxima) {
+                    velocidade = this.veloMaxima
+                }
+                this.setVeloAtual(velocidade)
+            }  
+            this.getVeloAtual = function() {
+                return this.veloAtual
+            }
+            this.setVeloAtual = function(veloAtual) {
+                this.veloAtual = veloAtual
+            }
+
+        }
+
+        let carro = new Carro()
+        carro.acelerar()
+        console.log(carro.veloAtual)
+        carro.acelerar()
+        console.log(carro.veloAtual)
+        carro.acelerar()
+        console.log(carro.veloAtual)
+        carro.acelerar()
+        console.log(carro.veloAtual)
+        carro.acelerar()
+        console.log(carro.veloAtual)
+        carro.acelerar()
+        console.log(carro.veloAtual)
+        
+
+
+
+        let Carro2 = function() { 
+
+            var veloMaxima = 250
+            var quilometrosRodados = 0 //atributo privado do objeto
+
+            this.cor = 'Vermelho'
+            this.modelo = 'Volkswagen'
+            this.veloAtual = 0
+
+            this.acelerar = function() {
+                let velocidade = this.getVeloAtual() + 50
+                if (velocidade > veloMaxima) { //atributo protegido
+                    velocidade = veloMaxima
+                }
+                this.setVeloAtual(velocidade)
+
+                setQuilometrosRodados(0.1)
+                console.log(quilometrosRodados)
+            }  
+            this.getVeloAtual = function() {
+                return this.veloAtual
+            }
+            this.setVeloAtual = function(veloAtual) {
+                this.veloAtual = veloAtual
+            }
+
+            var setQuilometrosRodados = function(q) {
+                quilometrosRodados += q //atributo privado do objeto
+            }
+        }
+
+        let carro2 = new Carro2()
+        carro2.acelerar()
+        console.log(carro2.veloAtual)
+        carro2.acelerar()
+        console.log(carro2.veloAtual)
+        carro2.acelerar()
+        console.log(carro2.veloAtual)
+        carro2.acelerar()
+        console.log(carro2.veloAtual)
+        carro2.acelerar()
+        console.log(carro2.veloAtual)
+        carro2.acelerar()
+        console.log(carro2.veloAtual)
+
+</script>   
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>
+;

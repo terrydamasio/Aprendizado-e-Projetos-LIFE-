@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+        //array 
+        let arr = [10, 20, 30, 40]
+
+        let [a, ...resto] = arr
+
+        console.log(a)
+        console.log(resto)
+
+
+
+        // objeto
+        let obj = {
+            b:10, c:20, d:30, e:40 
+        } 
+
+        let {b, ...z} = obj
+
+        console.log (b)
+        console.log (z)
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

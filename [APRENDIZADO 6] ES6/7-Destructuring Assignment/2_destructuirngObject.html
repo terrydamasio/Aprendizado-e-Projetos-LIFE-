@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        /* ------------------------
+           Destructuring Assignment: Array
+           ------------------------
+           É um operador de desestruturação, ou seja, tira valores de dentro de uma estrutura (que pode 
+           ser um array ou um objeto) e atribui a uma variável
+         
+            -----------
+            Composição:
+            -----------
+            Quando criamos objetos a partir de objetos literais, funções construtoras ou classes temos uma composição "é um"
+
+            Quando existe uma relação de atribuição de um objeto sendo o valor de algum atributo de outro objeto temos a composição "tem um"
+
+        */
+        
+        let produto = {
+            descricao: 'Notebok', 
+            preco: 1800,
+            detalhes: {
+                fabricante: 'Dell',
+                modelo: '01598110'
+            }                                             
+        }                        
+
+        //let { descricao, preco } = produto 
+        
+        
+        
+        //let { descricao: d, preco: p = 1000, desconto = 5+'%'} = produto
+        //console.log(d, p, desconto)
+
+        let { detalhes: { fabricante: f, modelo =  'Não Informado'} } = produto
+        console.log(f, modelo)
+
+    </script>   
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

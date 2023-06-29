@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+
+        function gerarFibonacci(numero) {
+            let fibonacci = [0, 1]; // Inicializa o array com os dois primeiros números da sequência
+
+            if (numero <= 1) {
+                return fibonacci.slice(0, numero + 1); // Retorna os primeiros números da sequência se o número informado for 0 ou 1
+            }
+
+            while (fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2] <= numero) {
+                // Calcula o próximo número da sequência enquanto for menor ou igual ao número informado
+                let proximoNumero = fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2];
+                fibonacci.push(proximoNumero); // Adiciona o próximo número ao array
+            }
+
+            return fibonacci;
+        }
+
+        let numero = 50;
+        let sequenciaFibonacci = gerarFibonacci(numero);
+        document.write(sequenciaFibonacci); // Saída: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

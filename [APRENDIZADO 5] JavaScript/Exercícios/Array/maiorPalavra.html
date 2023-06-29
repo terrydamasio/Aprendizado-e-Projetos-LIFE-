@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+
+        function buscarMaiorPalavra(string) {
+            // split para dividir a string em palavras sempre que houver um espaço
+            let palavras = string.split(' ');
+
+            // Inicializar a maiorPalavra como a primeira palavra da string
+            let maiorPalavra = palavras[0];
+
+            // Percorrer as palavras da string
+            for (let i = 1; i < palavras.length; i++) {
+                // Comparar o tamanho da palavra atual com o tamanho da maior palavra
+                if (palavras[i].length > maiorPalavra.length) {
+                // Se a palavra atual for maior, atualizar a maiorPalavra
+                maiorPalavra = palavras[i];
+                }
+            }
+
+            // Retornar a maior palavra encontrada
+            return maiorPalavra;
+        }
+
+        let string = "Olá, mundo! Essa é uma frase de caiojorge.";
+        let maiorPalavra = buscarMaiorPalavra(string);
+        document.write(maiorPalavra); // Saída: "exemplo."
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

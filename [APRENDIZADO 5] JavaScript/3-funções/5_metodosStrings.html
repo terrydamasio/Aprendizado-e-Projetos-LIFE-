@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Nativas</title>
+    <script>
+        
+        /* Funções nativas para manipular strings: valores primitivos como strings por si só, não possuem propriedades 
+        ou métodos, mas quando são interpretados pelo javascript, o javascript tem inteligencia pra
+        converte-los em objetos, e com isso, aplicar propriedades e metodos estabelecidos da linguagem
+        
+        Comprimento da String:
+
+        - String slice()                    - String trim()
+        - String substring()                - String trimStart()
+        - String substr()                   - String trimEnd()
+        - String replace()                  - String padEnd()
+        - String replaceAll()               - String padStart()
+        - String toUpperCase()              - String charAt()
+        - String toLowerCase()              - String charCodeAt()
+        - String concat()                   - String split()
+        */
+
+        var nome = ' Jorge Sant Ana '
+
+        //Propriedade length: retorna a quantidade de caracteres de uma string (uma string sempre começa em 0)
+        console.log(nome.length)
+
+        //retorna o caracter contido naquele índice (extrai o caracter contido na string indicado pelo indice)
+        console.log('Jorge Sant Ana'.charAt(11))
+        
+        //indexOf(): retorna a posição da primeira ocorrencia de um caracter contido na string
+        console.log(nome.indexOf('a'))
+
+        //replace(): permite com base em um valor de pesquisa substituir textos dentro de uma string
+        console.log(nome.replace('Sant Ana', 'Silva'))
+
+        /* substr(): permite extrair parte de uma string com base em uma posição inicial, seguida de um valor 
+        que representa a quantidade de caracteres a frente daquela posição inicial */
+        console.log(nome.substr(6, 4))
+
+        //toLowerCase(): converter para caracteres minusculos
+        //toUpperCase(): converter para caracteres maiusculos
+        console.log(nome.toUpperCase())
+
+        //trim(): remove os espaços em branco das extremidades de uma string
+        console.log('-' + nome.trim() + '-')
+
+        //Corte uma parte de uma corda da posição 1 para a posição 6:
+        console.log(nome.slice(1, 6))
+
+        //semelhante a slice diferença é que os valores inicial e final menores que 0 são tratados como 0 em substring().
+        console.log(nome.substring(1, 6))
+        
+        //semelhante a slice diferença é que o segundo parâmetro especifica o comprimento da parte extraída.
+        console.log(nome.substr(1, 6))
+
+        //replace substitui as strings
+        let text = "Please visit Microsoft and Microsoft!";
+        console.log(text.replace("Microsoft", "W3Schools"));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

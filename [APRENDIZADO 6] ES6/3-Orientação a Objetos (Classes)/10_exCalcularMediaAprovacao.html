@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        
+        let nome = 'Jorge'
+        let nota1 = 7
+        let nota2 = 7
+        let frequencia = 75
+
+
+        let objeto2 = {
+            nome,
+            nota1,
+            nota2, 
+            frequencia,
+            exibirMedia() { 
+                let media = (nota1 + nota2)/ 2
+
+                if(media >= 7 && frequencia >= 75) {
+                    console.log(`O aluno ${nome} foi aprovado com media ${media} e frequência de ${frequencia}%.`)
+                } else {
+                    console.log(`O aluno ${nome} foi reprovado com media ${media} e frequência de ${frequencia}%.`)
+                }
+            } 
+        }
+
+        console.log(objeto2.exibirMedia())
+
+
+    </script>   
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

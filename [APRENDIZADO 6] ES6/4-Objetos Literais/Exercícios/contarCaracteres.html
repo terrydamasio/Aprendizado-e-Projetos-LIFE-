@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+    
+    function contarCaracteres(string) {
+        const contador = {};
+        
+        for (let i = 0; i < string.length; i++) {
+            const caractere = string[i];
+            
+            if (contador[caractere]) {
+                contador[caractere]++;
+            } else {
+                contador[caractere] = 1;
+            }
+        }
+        
+        return contador;
+    }
+
+    const stringExemplo = "Hello, world!";
+    const resultado = contarCaracteres(stringExemplo);
+    console.log(resultado);
+
+    
+    </script>   
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

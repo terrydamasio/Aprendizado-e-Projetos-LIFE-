@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Babel -->  
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        
+        function calcularMediaAprovacao(alunos) {
+            const alunosAprovados = {};
+
+            for (const aluno in alunos) {
+                const notas = alunos[aluno].notas;
+                const frequencia = alunos[aluno].frequencia;
+
+                const media = calcularMedia(notas);
+                const aprovado = media >= 7 && frequencia >= 75;
+
+                alunosAprovados[aluno] = {
+                    media: media,
+                    aprovado: aprovado ? 'Aprovado' : 'Reprovado'
+                };
+            }
+
+
+
+            return alunosAprovados;
+        }
+
+        function calcularMedia(notas) {
+            const soma = notas.reduce((total, nota) => total + nota, 0);
+            return soma / notas.length;
+        }
+
+        const alunos = {
+            aluno1: {
+                notas: [8, 7, 6],
+                frequencia: 80
+            },
+            aluno2: {
+                notas: [9, 7, 8],
+                frequencia: 70
+            },
+            aluno3: {
+                notas: [6, 5, 7],
+                frequencia: 90
+            }
+        };
+
+        const resultado = calcularMediaAprovacao(alunos);
+        console.log(resultado);
+    </script>   
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

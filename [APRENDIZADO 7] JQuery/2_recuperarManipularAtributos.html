@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" 
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() =>  {
+            //lógica: selecionar a tag e depois o atributo
+            console.log($('div').attr('style', 'background-color: blue; width: 200px; height: 200px;'))
+        })
+    </script>
+</head>
+<body>
+    
+    <img src="img/esfera_1.png" border="5">
+
+    <div style="background-color: red; width: 100px; height: 100px;"></div>
+
+</body>
+</html>

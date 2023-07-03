@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" 
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() =>  {
+        
+            //atribuir como value o elemento selecionado (recuperar valores de inputs e selects)
+            //console.log($('#nome').val())
+
+        })
+    </script>
+</head>
+<body>
+    
+    <p>Nome:</p>
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <br>
+
+    <p>Onde você nos encontrou?</p>
+    <select id="origem">
+        <option value="0">-- Selecione a Origem --</option>
+        <option value="1">Google</option>
+        <option value="2">Instagram</option>
+        <option value="3">Facebook</option>
+        <option value="4">Twitter</option>
+    </select>
+
+</body>
+</html>

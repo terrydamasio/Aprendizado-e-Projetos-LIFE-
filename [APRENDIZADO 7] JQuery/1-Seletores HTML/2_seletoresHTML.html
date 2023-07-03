@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Selecionando elementos</h1>
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <ul>
+        <li class="itemMenu1">Menu 1 - Item 1</li>
+        <li class="itemMenu1">Menu 1 - Item 2</li>
+        <li class="itemMenu1">Menu 1 - Item 3</li>
+    </ul>
+
+    <ul id="menu2">
+        <li>Menu 2 - Item 1</li>
+        <li>Menu 2 - Item 2</li>
+        <li>Menu 2 - Item 3</li>
+    </ul>
+
+    <input type="text" placeholder="campo 1">
+
+    <select class="selectOption">
+        <option>-- Selecione uma opção --</option>
+        <option>Opção 1</option>
+        <option>Opção 2</option>
+    </select>
+
+    <br>
+
+    <img src="img/carro.jpg" alt="">
+</body>
+    <script>
+        //Selecionando elementos pela tag
+        console.log($('h1'))
+        console.log($('div'))
+        console.log($('ul'))
+        
+        //Selecionando elementos pela classe
+        console.log($('.itemMenu1'))
+        console.log($('.selectOption'))
+
+        //Selecionando elementos pelo id
+        console.log($('#menu2'))
+    </script>
+</html>

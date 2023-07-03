@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+
+        //Você pode fazer das três formas (nos três casos estamos usando o recurso de função de callback)
+        
+            //usando o $(document.ready(function(){...})) => passando uma função de callback
+                $(document).ready(function() {
+                    function teste() {
+                        console.log($('#exemplo'))
+                    }
+                    teste()
+                }) 
+        
+            //usando o function x() {...} $(x)
+                function teste() {
+                    console.log($('#exemplo'))
+                }
+
+                $(teste)
+                
+            //usando o $(function() {...}) => passando uma função anônima
+                $(function() {
+                        console.log($('#exemplo'))
+                })
+
+    </script>
+
+    <div id="exemplo">Teste</div>
+</body>
+</html>

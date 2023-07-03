@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <input class="exemplo1" type="text" placeholder="Digite aqui 1">
+    <input type="text" placeholder="Digite aqui 2">
+    <input type="text" placeholder="Digite aqui 3">
+    <div class="lista1">
+        <div class="exemplo1">Div 1</div>
+        <div>Div 2</div>
+        <div>Div 3</div>
+    </div>
+
+    <ul class="lista1">
+        <li class="exemplo1">Opção 1</li>
+        <li class="exemplo2">Opção 2</li>
+        <li class="exemplo2">Opção 3</li>
+    </ul>
+    <ul class="lista2">
+        <li class="exemplo2">Opção 1</li>
+        <li class="exemplo2">Opção 2</li>
+        <li class="exemplo1">Opção 3</li>
+    </ul>
+
+</body>
+    <script>
+        //Combinação de seletores 
+            //selecionar elementos por classe de tags especificas: informar a tag na atrás do ponto
+            console.log($('li.exemplo1'))
+
+            //selecionar elementos por classe de classe específica: informar a classe que você quer selecionar
+            console.log($('div.lista1 .exemplo2'))
+
+        /* Atuação sobre o array de retorno dos elementos selecionados 
+        Atalhos: 
+            - :first > retornar primeiro elemento de uma seleção
+            - :last > retornar último elemento de uma seleção
+            - :even > retornar somente os elementos contidos nos índices pares
+            - :odd > retornar somente os elementos contidos nos índices ímpares
+        */
+            console.log($('.lista1 .exemplo2'))
+            console.log($('.lista1 .exemplo2:first'))
+            console.log($('.lista1 .exemplo2:last'))
+            console.log($('.lista1 .exemplo2:even'))
+            console.log($('.lista1 .exemplo2:odd'))
+        
+        
+
+    </script>
+</html>

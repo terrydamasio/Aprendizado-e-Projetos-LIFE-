@@ -17,6 +17,14 @@
             width: 80px;
             height: 80px;
         }
+
+        .inputFocado {
+            background-color: #ff0000;
+        }
+
+        .inputDesfocado {
+            background-color: #ffffff;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="  crossorigin="anonymous"></script>
     <script>
@@ -119,22 +127,29 @@
 
 
             //EVENTOS DE FORMULÁRIOS: focus(); blur(); change(); submit() 
-            $('#nome').focus(() => {
+            $('#nome').focus((e) => {
                 console.log('Recebeu foco (nome)')
+                $(e.target).addClass('inputFocado')
             })
 
-            $('#email').focus(() => {
+            $('#email').focus((e) => {
                 console.log('Recebeu foco (email)')
+                $(e.target).addClass('inputFocado')
             })
 
-            $('#nome').blur(() => {
+            $('#nome').blur((e) => {
                 console.log('Perdeu foco (nome)')
+                $(e.target).addClass('inputDesfocado')
             })
 
-            $('#email').blur(() => {
+            $('#email').blur((e) => {
                 console.log('Perdeu foco (email)')
+                $(e.target).addClass('inputDesfocado')
             })
-        
+
+            $('#opcao').change((e) => {
+                console.log($(e.target).val())
+            })
 
         })
     </script>
@@ -195,7 +210,7 @@
 				<input type="text" id="email"/>
 
 				<span>Motivo do contato:</span>
-				<select>
+				<select id="opcao">
 					<option value="">-- Selecione --</option>
 					<option value="duvida">Dúvida</option>
 					<option value="sugestao">Sugestão</option>

@@ -9,40 +9,33 @@
     crossorigin="anonymous"></script>
     <script>
         $(document).ready(() =>  {
-        
-            //atribuir como value o elemento selecionado (recuperar valores de inputs e selects)
-            //$.each(array, callback function)
-            /* $.each($('.interesse:checked'), (indice, valor) => {
-                console.log(indice, valor.value)
-            })
-            */
+            $('#lista1').prepend('<li>Item 0</>')
+            $('#lista1').append('<li>Item 4</>')
+            $('#lista1').after('<p>Eu gosto de pão</p>')
+            $('#lista1').before('<p>Eu gosto de queijo</p>')
+            $('.div1').remove('<p>Eu gosto de queijo</p>')
+
+
         })
     </script>
 </head>
 <body>
+
+    <ul id="lista1">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <div id="lista 2">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <hr>
+
     
-    <p>Nome:</p>
-    <input type="text" id="nome" placeholder="Digite seu nome">
-    <br>
-
-    <p>Onde você nos encontrou?</p>
-    <select id="origem">
-        <option value="0">-- Selecione a Origem --</option>
-        <option value="1">Google</option>
-        <option value="2">Instagram</option>
-        <option value="3">Facebook</option>
-        <option value="4">Twitter</option>
-    </select>
-
-    <p>Sexo:</p>
-    <input type="radio" name="sexo" class="sexo" value="f"> Feminino<br>
-    <input type="radio" name="sexo" class="sexo" value="m"> Masculino
-    <br>
-
-    <p>Interesses:</p>
-    <input type="checkbox" name="interesse" class="interesse" value="php">PHP <br>
-    <input type="checkbox" name="interesse" class="interesse" value="javascript">JavaScript <br>
-    <input type="checkbox" name="interesse" class="interesse" value="java">Java <br>
-    <input type="checkbox" name="interesse" class="interesse" value="angular">Angular <br>
+    
 </body>
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" 
+    crossorigin="anonymous"></script>
+    <script>
+        /* Manipulando css: 
+        - css() => adiciona propriedades de estilo inline
+        - addClass() => adiciona classes
+        - hasClass() => verifica a existência de uma classe no elemento html
+        - removeClass() => remove classes
+
+        para manipular passamos dois parametros:
+        - o primeiro é o parametro de estilo que queremos manipular. Ex: background-color
+        - o segundo é o valor associado a esse atributo. Ex: #000
+        */
+
+        //$('#topo').css({'background': '#155661', 'margin': '0px', 'padding': '10px 20px 10px 20px'})
+    </script>
+
+    <style>
+        .campo {
+            background: #ddd;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .padrao {
+            background-color: #ddd;
+        }
+
+        .erro {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="topo">
+        <h1>Barra de navegação da aplicação</h1>
+    </div>
+
+    <div>
+        <h3>Contato</h3>
+        <hr>
+    </div>
+
+    <p>Nome:</p>
+    <input type="text">
+    <br>
+
+    <p>Email:</p>
+    <input type="text">
+    <br>
+
+    <p>Mensagem:</p>
+    <textarea></textarea>
+    <br>
+
+    <button type="button">Enviar</button>
+</body>
+</html>

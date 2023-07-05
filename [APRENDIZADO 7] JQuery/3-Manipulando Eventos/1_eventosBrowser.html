@@ -52,6 +52,8 @@
                 $('#div1').html('<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>').css('background-color', 'red')
             })
 
+
+
             //EVENTOS MOUSE
             $('#btn1').mousedown(() => {
                 $('#div2').css('background-color', 'green')
@@ -108,6 +110,8 @@
                 console.log('Div Interna (saiu)')
             })
             
+
+
             //EVENTOS TECLADO: keydown(); keyup 
             $('#teclado').keydown(() => {
                 $('#resultadoTecla').html('Tecla pressionada')
@@ -127,29 +131,29 @@
 
 
             //EVENTOS DE FORMULÁRIOS: focus(); blur(); change(); submit() 
-            $('#nome').focus((e) => {
+            $('#nome, #email').focus((e) => {
                 console.log('Recebeu foco (nome)')
                 $(e.target).addClass('inputFocado')
             })
 
-            $('#email').focus((e) => {
-                console.log('Recebeu foco (email)')
-                $(e.target).addClass('inputFocado')
-            })
-
-            $('#nome').blur((e) => {
+            $('#nome, #email').blur((e) => {
                 console.log('Perdeu foco (nome)')
-                $(e.target).addClass('inputDesfocado')
-            })
-
-            $('#email').blur((e) => {
-                console.log('Perdeu foco (email)')
                 $(e.target).addClass('inputDesfocado')
             })
 
             $('#opcao').change((e) => {
                 console.log($(e.target).val())
             })
+
+            $('form').submit((e) => {
+                e.preventDefault() //impede a ação de acontecer
+                console.log('Formulário enviado')
+            })
+
+            $('a').click(e => {
+                e.preventDefault()
+            })
+
 
         })
     </script>
@@ -202,7 +206,7 @@
 
             <!-- Formulário -->
 			<h3>Formulário</h3>
-			<form>
+			<form id="form">
 				<span>Nome:</span>
 				<input type="text" id="nome"/>
 
@@ -216,9 +220,12 @@
 					<option value="sugestao">Sugestão</option>
 				</select>
 				
-				<button type="button">Enviar</button>
+				<button type="submit">Enviar</button>
 			</form>
              <!-- Formulário -->
+
+            <br>
+            <a href="http://www.google.com.br">Google</a>
 		</div>
 
         <br><br><br><br><br><br><br><br><br><br><br>

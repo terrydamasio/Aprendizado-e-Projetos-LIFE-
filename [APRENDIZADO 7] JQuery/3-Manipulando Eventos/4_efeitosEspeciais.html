@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+		<style>
+			button {
+				margin-bottom: 5px;
+				width: 100px;
+			}
+
+			.div {
+				width: 100px;
+				height: 100px;
+			}
+
+			.div1 {
+				background-color: red
+			}
+
+			.div2 {
+				background-color: green
+			}
+
+			.div3 {
+				background-color: blue
+			}
+
+            .div4 {
+				background-color: purple
+			}
+
+			.grupo {
+				padding: 25px;
+				float: left
+			}
+		</style>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+            /* Efeitos especiais 
+            - show() => mostra o elemento
+            - hide() => esconde o elemento
+            - toggle() => transita entre esconder e mostrar o elemento
+            - fadeOut() => mostra o elemento
+            - fadeIn() => esconde o elemento
+            - fadeToggle() => transita entre esconder e mostrar o elemento
+            - fadeTo() => aplica opacidade 
+            - slideUp()
+            - slideDown()
+            - slideToggle()
+            */
+			$(document).ready(() => {
+				
+                //$('#div1').hide('slow')
+                //$('#div1').show('fast')
+                //$('#div2').fadeTo('slow', 0.5)
+                
+                $('#btn1').on('click', () => {
+                    $('#div1').toggle('slow')
+                })
+
+                $('#btn2').on('click', () => {
+                    $('#div2').fadeToggle('slow')
+                })
+
+                $('#btn3').on('click', () => {
+                    $('#div3').fadeTo('slow', 0.5)
+                })
+
+                $('#btn4').on('click', () => {
+                    $('#div4').slideToggle('slow')
+                })
+			})
+		</script>
+	</head>
+	<body>
+		
+		<div id="btn1" class="grupo">
+			<button type="button">DIV 1</button>
+			<div id="div1" class="div div1"></div>
+		</div>
+
+		<div id="btn2" class="grupo">
+			<button type="button">DIV 2</button>
+			<div id="div2" class="div div2"></div>
+		</div>
+
+		<div id="btn3" class="grupo">
+			<button type="button">DIV 3</button>
+			<div id="div3" class="div div3"></div>
+		</div>
+
+        <div id="btn4" class="grupo">
+			<button type="button">DIV 4</button>
+			<div id="div4" class="div div4"></div>
+		</div>
+			
+	</body>
+</html>

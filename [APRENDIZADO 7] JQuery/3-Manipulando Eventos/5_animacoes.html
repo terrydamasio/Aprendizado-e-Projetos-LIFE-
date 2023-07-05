@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+		<style>
+			.div {
+                width: 80px;
+                height: 80px;
+                border: solid 1px #000;
+                background-color: #aaa;
+                display: flex;
+            }
+
+
+		</style>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+           /* Animações - atua sobre qualquer propriedade CSS numérica 
+                animate(<pripriedades visuais>,<opções de transição>)
+           */
+            $(document).ready(() => {
+                $('button').on('click', () => {
+                    $('#div1').animate({
+                        'width': '160px',
+                        'height': '160px',
+                        'margin-left': '300',
+                        'margin-top': '300',
+                        'border-radius': '10px'
+                    }, 
+                    {
+                        duration: 2000,
+                        start: () => {console.log('Animação iniciada')},
+                        complete: () => {
+                            $('#div2').animate({
+                                'width': '160px',
+                                'height': '160px',
+                                'margin-left': '300',
+                                'margin-top': '300',
+                                'border-radius': '10px'
+                            }, {duration: 2000})
+                        }
+                    })
+                })
+                
+
+
+            })
+
+
+		</script>
+	</head>
+	<body>
+	
+        <button type="button">Iniciar animação</button>
+        <div id="div1" class="div"></div>
+
+        <div id="div2" class="div"></div>
+	</body>
+</html>

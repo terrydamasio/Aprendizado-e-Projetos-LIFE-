@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <style>
+       #div1 {
+        width: 80px;
+        height: 80px;
+        border: 1px solid red;
+       }
+
+       .emDestaque {
+        background-color: red;
+       }
+
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="  crossorigin="anonymous"></script>
+    <script>
+        /* Eventos - Disparando eventos de forma programática e eventos auxiliadores
+        - trigger() => aciona o disparo dos eventos do código html
+        - hover() => evento auxiliar que captura os eventos mouseenter/ mouseout/ mouseleave/ mouseover
+        - toggleClass() => função auxiliar para inclusão/remoção de classe
+        */
+
+        $(document).ready(() => {
+            $('#btn2').on('click', () => {
+                alert('BTN 2 clicado')
+            })
+
+            $('#btn1').on('click', () => {
+                $('#btn2').trigger('click')
+            })
+
+            $('#div1').hover( 
+                e => $(e.target).toggleClass('emDestaque')
+            )
+            /*
+            $('#div1').on('mouseenter', e => {
+                $(e.target).addClass('emDestaque')
+            })
+
+            $('#div1').on('mouseleave', e => {
+                $(e.target).removeClass('emDestaque')
+            })
+            */
+        })
+    </script>
+</head>
+<body>
+ 
+    <button id="btn1" type="button">BTN 1</button>
+    <button id="btn2" type="button">BTN 2</button>
+
+    <hr>
+    <div id="div1">DIV 1</div>
+    
+</body>
+</html>

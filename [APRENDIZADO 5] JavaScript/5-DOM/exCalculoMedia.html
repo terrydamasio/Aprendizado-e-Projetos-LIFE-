@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function calcularMedia(nota1, nota2, nota3, media) {
+            var nota1 = parseInt(document.getElementById('av1').value); 
+            var nota2 = parseInt(document.getElementById('av2').value);
+            var nota3 = parseInt(document.getElementById('av3').value);  
+            var media = ((nota1 + nota2 + nota3)/3).toFixed(2);
+
+            document.getElementById('media').value = media;
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Calculo Media</h1>
+    <input id="av1" type="text" placeholder="Digite a nota da AV1"> <br>
+    <input id="av2" type="text" placeholder="Digite a nota da AV2"> <br>
+    <input id="av3" type="text" placeholder="Digite a nota da AV3"> <br>
+    <button id="btn" onclick="calcularMedia()">Calcular Media</button> <br>
+    <input id="media" type="text" disabled style="width: 35px;">
+    <input id="description" type="text">
+</body>
+</html> 

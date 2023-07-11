@@ -9,8 +9,18 @@
     <?php  
         //Arrays Multidimensionais: são arrays dentro de arrays
 
-        
+        $lista_compras = [];
 
+        $lista_compras['Carnes'] = [
+            1 => 'Picanha',
+            2 => 'Maminha', 
+            3 => 'Charque', 
+            4 => 'Carne de Sol'];
+        
+        
+        echo '<pre>';
+        print_r($lista_compras);
+        echo '</pre>';
     ?>  
 </body>
 </html>

@@ -9,7 +9,7 @@
     <?php
         $arrayNumeros = [];
 
-        while (count($arrayNumeros) < 6) {
+        while(count($arrayNumeros) < 6) {
             $numero = rand(1, 60);
 
             if(!in_array($numero, $arrayNumeros)) {
